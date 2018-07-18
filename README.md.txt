@@ -2,13 +2,19 @@ Linux Server Configration - Project 6 - Full Stack Web Development Udacity Nanod
 
 My Project is on " http://18.130.184.123 " 
 
-Steps to run my project :- 
+##Packages installed in the VN :-
+	python , apache , postgreSQL database , flask , mod_wsgi 
+	https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
+
+##Steps to run my project :- 
 
 1- you should make any instance (server , machine) , I used Amazon service lightsail (ubuntu)
 	download the Key of your instance they will give you file to connect ssh local 
 	in your machine with name : LightsailDefaultPrivateKey-eu-central-1.pem
 
-2- SSH into the server from th terminal write " ssh ubuntu@18.130.184.123 -p 22 -i ~/OMN/LightsailDefaultPrivateKey-eu-central-1.pem"
+2- SSH into the server from th terminal write 
+	" ssh ubuntu@18.130.184.123 -p 22 -i ~/OMN/LightsailDefaultPrivateKey-eu-central-1.pem"
 
 3- Update currently installed packages write " sudo apt-get update ,  sudo apt-get upgrade "
 
@@ -17,7 +23,8 @@ Steps to run my project :-
 	uncoment "AuthorizedKeysFile"
 	the restart ssh " sudo service ssh restart "
 
-5- Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
+5- Configure the Uncomplicated Firewall (UFW) to only allow incoming connections 
+	for SSH (port 2200), HTTP (port 80), and NTP (port 123).
 	"sudo ufw allow 2200"
 	"sudo ufw allow www"
 	"sudo ufw allow ntp"
